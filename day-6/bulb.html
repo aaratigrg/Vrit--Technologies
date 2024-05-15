@@ -3,11 +3,17 @@
 <head>
     
     <title>Day 6</title>
+    <link rel="stylesheet" href="bulb.css">
 </head>
+
 <body>
-    <div id="bulb-container"></div>
+    <div id="bulb-container">
+        <h1> Lights Turn ON/Off</h1>
     <button onclick="onLight()">On</button>
     <button onclick="offLight()">Off</button>
+    </div>
+    
+    
     
 
     <script>
@@ -18,6 +24,7 @@ let imageTag= document.createElement('img');
 imageTag.src='1.png';
 bulbContainer.innerHTML='';
 bulbContainer.appendChild(imageTag);
+
 
        }
        
