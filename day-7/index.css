@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c7bcbc;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);S
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color:darkslateblue;
+    color: white;
+    border-radius: 5px;
+}
+
+#counter {
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+}

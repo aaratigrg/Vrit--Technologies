@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game-board"></div>
+    <h1> Your score: <span id="score" >0</span></h1>
+
+    <script>
+        let score=0;
+        var scoreElement= document.getElementById('score');
+        console.log('scoreElement.textContent', scoreElement.textContent);
+        
+
+        // console.log (  'jhgdf' ,Math.random() * (500-100));
+
+        function createBoard()
+        {
+            var gamearea= document.getElementById('game-board');
+            gamearea.style.width='500px';
+            gamearea.style.height='500px';
+            gamearea.style.background='red';
+        
+
+      
+            // console.log('gamearea',gamearea)
+        }
+         
+        function moveMosquito()
+
+        {
+            let top= Math.floor(Math.random() * (500-100));
+            let left= Math.floor(Math.random() * (500-100));
+
+            var gamearea= document.getElementById('game-board');
+            var mosquito=  document.createElement('img')
+          mosquito.src='https://akm-img-a-in.tosshub.com/indiatoday/images/story/201210/makkhi_660_101212102328.jpg?VersionId=FzbP8b.3Z.jc1YB9crkyF0uGctRGl6ey&size=690:388';
+            mosquito.style.height='40px';
+            mosquito.style.weight='40px';
+            mosquito.style.marginTop= `${top}px`;
+            mosquito.style.marginLeft= `${left}px`;
+            gamearea.innerHTML='';
+           gamearea.appendChild(mosquito); 
+           
+           mosquito.addEventListener('click',function(){
+            score++;
+            scoreElement.textContent= score;
+
+
+           })
+        }
+
+        function startGame()
+
+        {
+            createBoard();
+            moveMosquito();
+            setInterval(()=>{
+                moveMosquito();
+
+            },2000)
+        }
+
+        startGame();
+        
+    <!-- // // setTimeout(()=>{
+    //     console.log('I am a set time out element')        -setting Timer
+    // },1000)
+
+    // setInterval(()=>{
+    //     console.log('element')                            -setting Interval
+    // },1000) -->
+
+</script>
+</body>
+</html>
