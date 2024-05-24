@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    
+    <title>Day 6</title>
+    <link rel="stylesheet" href="bulb.css">
+</head>
+
+<body>
+    <div id="bulb-container">
+        <h1> Lights Turn ON/Off</h1>
+    <button onclick="onLight()">On</button>
+    <button onclick="offLight()">Off</button>
+    </div>
+    
+    
+    
+
+    <script>
+       function onLight()
+       {
+let bulbContainer = document.getElementById('bulb-container');
+let imageTag= document.createElement('img');
+imageTag.src='1.png';
+bulbContainer.innerHTML='';
+bulbContainer.appendChild(imageTag);
+
+
+       }
+       
+       
+       function offLight()
+       {
+        let bulbContainer = document.getElementById('bulb-container');
+let imageTag= document.createElement('img');
+imageTag.src='2.png';
+bulbContainer.innerHTML='';
+bulbContainer.appendChild(imageTag);
+       }
+
+    </script>
+</body>
+</html>
