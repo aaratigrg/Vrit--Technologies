@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="mosquito.css">
 </head>
 <body>
     <div id="game-board"></div>
@@ -22,7 +23,8 @@
             var gamearea= document.getElementById('game-board');
             gamearea.style.width='500px';
             gamearea.style.height='500px';
-            gamearea.style.background='red';
+            gamearea.style. backgroundImage = "url('https://media.istockphoto.com/id/587224596/vector/forest-landscape-illustration.jpg?s=1024x1024&w=is&k=20&c=0JJ0yvQYgLwG35EYFd2QSAUvRQC1gvM3OxrpNBsUO8c=')"; 
+            // gamearea.style.background='red';
         
 
       
@@ -36,18 +38,24 @@
             let left= Math.floor(Math.random() * (500-100));
 
             var gamearea= document.getElementById('game-board');
-            var mosquito=  document.createElement('img')
-          mosquito.src='https://akm-img-a-in.tosshub.com/indiatoday/images/story/201210/makkhi_660_101212102328.jpg?VersionId=FzbP8b.3Z.jc1YB9crkyF0uGctRGl6ey&size=690:388';
+            var mosquito=  document.createElement('img');
+          mosquito.src='https://as2.ftcdn.net/v2/jpg/00/93/97/75/1000_F_93977557_xBlAd1NgzmwcgiyPk583lrqdJN0UcKtQ.jpg';
             mosquito.style.height='40px';
             mosquito.style.weight='40px';
+            mosquito.style.cursor='';
             mosquito.style.marginTop= `${top}px`;
             mosquito.style.marginLeft= `${left}px`;
+            var sound= new Audio();
+            sound.src='gun.mp3.mp3'
             gamearea.innerHTML='';
            gamearea.appendChild(mosquito); 
            
            mosquito.addEventListener('click',function(){
             score++;
-            scoreElement.textContent= score;
+            scoreElement.textContent = score;
+            sound.play();
+         
+
 
 
            })
